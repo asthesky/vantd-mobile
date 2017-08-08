@@ -1,0 +1,47 @@
+/* flexbox */
+
+.#{$ui-prefix}-flexbox {
+    text-align: left;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    &-item {
+        box-sizing: border-box;
+        flex: 1;
+        margin-left: $h-spacing-md;
+        min-width: 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+@each $align in ("flex-start" "flex-end" "center" "stretch" "baseline") {
+    .#{$ui-prefix}-align-#{$align} {
+        align-items: #{$align};
+    }
+}
+
+@each $direction in ("row" "row-reverse" "column" "column-reverse") {
+    .#{$ui-prefix}-direct-#{$direction} {
+        flex-direction: #{$direction};
+    }
+}
+
+@each $wrap in ("nowrap" "wrap" "wrap-reverse") {
+    .#{$ui-prefix}-#{$wrap} {
+        flex-wrap: #{$wrap};
+    }
+}
+
+@each $justify in ("flex-start" "flex-end" "center" "space-between" "space-arround") {
+    .#{$ui-prefix}-justify-#{$justify} {
+        justify-content: #{$justify};
+    }
+}
+
+@each $alignContent in ("flex-start" "flex-end" "center" "space-between" "space-arround" "stretch") {
+    .#{$ui-prefix}-aligncont-#{$alignContent} {
+        align-content: #{$alignContent};
+    }
+}
