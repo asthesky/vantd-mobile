@@ -1,15 +1,25 @@
 import Flex from './components/flex'
 import WhiteSpace from './components/white-space'
 import WingBlank from './components/wing-blank'
+// 
+import Carousel from './components/carousel'
 
 const components = {
-    /* General */
-
     /* Layout */
     Flex,
     WhiteSpace,
     WingBlank,
-    // 
+
+    /* Navigation*/
+
+    /* Data Entry*/
+
+    /* Data Display*/
+
+    Carousel,
+    /* Feedback*/
+
+
 }
 
 // 组件单独挂载install方法 (当组件返回的为数组时将每个组件都挂载)

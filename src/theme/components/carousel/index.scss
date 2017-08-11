@@ -1,0 +1,82 @@
+.#{$ui-prefix}-carousel {
+    &-wrap,
+    &-inner {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.#{$ui-prefix}-carousel-slides {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.#{$ui-prefix}-carousel-item {
+    position: absolute; 
+    // -webkit-transform: translateX(-100%);
+    // transform: translateX(-100%);
+    width: 100%;
+    height: 100%; 
+    // display: none;
+    &.active {
+        display: block;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.#{$ui-prefix}-carousel-arrow {
+    &-prev {
+        left: 16px;
+    }
+    &-next {
+        right: 16px;
+    }
+    &-prev,
+    &-next {
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        text-align: center;
+        line-height: 36px;
+        color: #FFF;
+        border-radius: 36px;
+        background-color: rgba(31, 45, 61, .11);
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            background-color: rgba(31, 45, 61, .2);
+        }
+    }
+}
+
+.#{$ui-prefix}-carousel {
+    &-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        transform: translate3d(-50%, 0, 0);
+    }
+    &-dot {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 6px;
+        border-radius: $radius-circle;
+        background: $color-icon-base;
+
+        &.active {
+             background: #888;
+        }
+    }
+}

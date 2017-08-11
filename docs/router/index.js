@@ -17,6 +17,11 @@ export default new Router({
       name: 'flex',
       component: require('../components/flex/index.vue')
     },
+    {
+      path: '/carousel',
+      name: 'carousel',
+      component: require('../components/carousel/index.vue')
+    },
 
   ]
 })
